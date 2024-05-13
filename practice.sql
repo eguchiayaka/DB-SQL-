@@ -65,7 +65,7 @@ mysql> SELECT
     -> countries
     -> WHERE
     -> life_expectancy >= 56 AND
-    -> life_expectancy < 76
+    -> life_expectancy <= 76
     -> ;
 
 -- 問6
@@ -169,8 +169,8 @@ mysql> SELECT
     -> FROM
     -> countries
     -> WHERE
-    -> indep_year <= 1990 OR
-    -> population >= 100000
+    -> indep_year < 1990 OR
+    -> population > 100000
     -> ;
 
 -- 問13
@@ -186,7 +186,7 @@ mysql> SELECT
     -> countries
     -> WHERE
     -> (code = "DZA" OR code = "ALB") AND
-    -> indep_year <= 1990 
+    -> indep_year < 1990 
     -> ;
 
 -- 問14
@@ -217,7 +217,7 @@ mysql> SELECT
     -> WHERE
     -> life_expectancy IS NOT NULL
     -> ORDER BY
-    -> life_expectancy ASC
+    -> life_expectancy DESC
     -> ;
 
 
